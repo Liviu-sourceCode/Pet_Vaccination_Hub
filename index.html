@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaugare si Stergere Animal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 5;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            margin-top: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        #label_id_vaccin{
+            margin-top:5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Adaugare si stergere din tabelul 'animale'</h2>
+        <form action="prj.php" method="post">
+            <label for="nume_animal">Nume animal:</label>
+            <input type="text" id="nume_animal" name="nume_animal">
+
+            <label for="specie">Specie:</label>
+            <input type="text" id="specie" name="specie">
+
+            <label for="varsta">Varsta:</label>
+            <input type="text" id="varsta" name="varsta">
+
+            <label for="id_animal">ID animal (pentru stergere):</label>
+            <input type="text" id="id_animal" name="id_animal">
+
+            <input type="submit" value="Adauga animal" name="adauga_animal">
+            <input type="submit" value="Sterge animal" name="sterge_animal">
+            <input type="submit" value="Sterge toate animalele" name="sterge_toate_animalele">
+            
+            
+            <h2>Adaugare si stergere din tabelul 'vaccinuri'</h2>
+            <label for="nume_vaccin">Nume vaccin:</label>
+            <input type="text" id="nume_vaccin" name="nume_vaccin">
+
+            <label for="tip_vaccin">Tip vaccin:</label>
+            <input type="text" id="tip_vaccin" name="tip_vaccin">
+
+            
+
+            <label for="id_vaccin" id="label_id_vaccin">ID vaccin (pentru stergere):</label>
+            <input type="text" id="id_vaccin" name="id_vaccin">
+
+            
+            <input type="submit" value="Adauga vaccin" name="adauga_vaccin">
+            <input type="submit" value="Sterge vaccin" name="sterge_vaccin">
+            <input type="submit" value="Sterge toate vaccinurile" name="sterge_toate_vaccinurile">
+
+            <h2>Administrare vaccinuri</h2>
+            <label for="id_animal_ad">ID animal:</label>
+            <input type="text" id="id_animal_ad" name="id_animal_ad">
+            <label for="id_vaccin_ad">ID vaccin:</label>
+            <input type="text" id="id_vaccin_ad" name="id_vaccin_ad">
+            <label for="id_administrare">ID administrare (pentru stergere):</label>
+            <input type="text" id="id_administrare" name="id_administrare">
+            <label for="data_aplicare">Data aplicare:</label>
+            <input type="date" id="data_aplicare" name="data_aplicare">
+            <br>
+
+            <input type="submit" value="Salveaza administrarea" name="salveaza_administrarea">
+            <input type="submit" value="Sterge administrarea" name="sterge_administrarea">
+            <input type="submit" value="Verifica tabelele" name="verifica">
+
+
+        </form>
+    </div>
+</body>
+</html>
