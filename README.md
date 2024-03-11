@@ -1,4 +1,4 @@
-# Pet_Vaccination_Hub
+# Pet_Vaccination_Hub cc
 
 Acest proiect are ca scop gestionarea vaccinurilor destinate animalelor de companie, fiind ideal pentru un cabinet veterinar.
 Tehnologiile utilizate: am folosit Html & Css pentru partea de front-end, iar pentru partea de back-end am folosit PHP si MySQL.
