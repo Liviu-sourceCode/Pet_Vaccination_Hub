@@ -1,9 +1,9 @@
 <?php
 $servername = "localhost"; // Sau adresa IP a serverului MySQL
-$port = "port_number"; // Portul implicit pentru MySQL
-$username = "xxxxx";
+$port = "port"; // Portul implicit pentru MySQL
+$username = "username";
 $password = "########"; // Parola ta de conexiune
-$database = "name_database";
+$database = "database_name";
 
 // Crearea conexiunii
 $conn = new mysqli($servername . ':' . $port, $username, $password, $database);
@@ -53,7 +53,7 @@ if (($_SERVER["REQUEST_METHOD"])  == "POST") {
             }
         } else {
             // ID-ul nu există în tabel, afișăm un mesaj corespunzător
-            echo "Nu există niciun animal cu ID-ul $id_animal!<br>";
+            echo "Nu există nici un animal cu ID-ul $id_animal!<br>";
         }
     } 
 
@@ -73,7 +73,7 @@ if (mysqli_query($conn, $reset_auto_increment)) {
 } else {
     echo "Eroare la ștergerea datelor din tabelul 'animale': " . mysqli_error($conn);
 }
-}
+    }
 
 // Comanda SQL pentru selectarea tuturor inregistrarilor din tabelul "animale"
 $sql_select_animale = "SELECT * FROM animale";
@@ -82,13 +82,13 @@ $result = $conn->query($sql_select_animale);
 // Verifica daca interogarea a returnat rezultate
 
 if ($result->num_rows > 0 && (isset($_POST["adauga_animal"]) || isset($_POST["sterge_animal"])))  {
-    echo "Elementele din tabelul animale:<br>";
+    echo "Elementele din tabelul 'animale':<br>";
     // Afiseaza rezultatele
     while ($row = $result->fetch_assoc()) {
         
         echo " ID: " . $row["id"] . " - Nume: " . $row["nume"] . " - Specie: " . $row["specie"] . " - Varsta: " .$row["varsta"] . "<br>";
     }
- } else if(isset($_POST["adauga_animal"]) || isset($_POST["sterge_animal"])) {
+ } else if(isset($_POST["sterge_animal"])) {
     echo "Nu au fost gasite inregistrari in tabelul 'animale'!<br>";
 
     // Comanda SQL pentru a reseta incrementul
@@ -101,7 +101,6 @@ if (mysqli_query($conn, $reset_auto_increment)) {
     echo "Eroare la resetarea incrementului: " . mysqli_error($conn);
   }
  }
-
 
 // zona pentru gestionarea vaccinurilor
 
@@ -136,7 +135,7 @@ if (mysqli_query($conn, $reset_auto_increment)) {
             if (mysqli_query($conn, $delete_query)) {
                 echo "Vaccinul cu ID-ul $id_vaccin a fost șters cu succes!<br>";
             } else {
-                echo "Eroare la ștergerea vaccinului: " . mysqli_error($conn);
+                echo "Eroare la ștergerea vaccinului:" . mysqli_error($conn);
             }
         } else {
             echo "Nu există niciun vaccin cu ID-ul $id_vaccin!<br>";
@@ -164,7 +163,7 @@ if (mysqli_query($conn, $reset_auto_increment)) {
     $result = $conn->query($sql_select_vaccinuri);
 
     if ($result->num_rows > 0 && (isset($_POST["adauga_vaccin"]) || isset($_POST["sterge_vaccin"])))  {
-        echo "Elementele din tabelul vaccinuri:<br>";
+        echo "Elementele din tabelul 'vaccinuri':<br>";
         while ($row = $result->fetch_assoc()) {
             echo "ID: " . $row["id"]. " - Nume: " . $row["nume"]. " - Tip: " . $row["tip"]  .  "<br>";
         }
@@ -213,7 +212,7 @@ if (mysqli_query($conn, $reset_auto_increment)) {
     $result = $conn->query($sql_select_administrare_vaccinuri);
 
     if ($result -> num_rows > 0) {
-         echo "Elementele din tabelul de administrare tratamente:<br>";
+         echo "Elementele din tabelul 'administrare vaccinuri':<br>";
          while ($row = $result ->fetch_assoc()){
             echo "ID: " . $row["id"] . " -ID animal: " . $row["id_animal"] . " -ID vaccin: " . $row["id_vaccin"] . " -Data aplicare: " . $row["data_aplicare"] . "<br>"; 
          } 
@@ -276,7 +275,7 @@ if ($conn->query($sql) === TRUE) {
         $row_vaccin = $result_vaccin->fetch_assoc();
         
         // Afișăm mesajul de succes folosind numele animalului și al vaccinului
-        echo "Administrarea vaccinului " . $row_vaccin["nume"] . " pentru animalul " . $row_animal["nume"] . " la data de $data_aplicare a fost realizată cu succes!";
+        echo "Administrarea vaccinului " . "'" .$row_vaccin["nume"] . "'" ." pentru animalul " . "'" .$row_animal["nume"] . "'" . " la data de '$data_aplicare' a fost realizată cu succes!";
     } else {
         echo "Nu s-au găsit înregistrări pentru ID-urile specificate.";
     }
@@ -322,3 +321,4 @@ if ($conn->query($sql) === TRUE) {
 
 // Închide conexiunea
 $conn->close();
+
