@@ -1,4 +1,5 @@
 <?php
+
 $servername = "localhost"; // Sau adresa IP a serverului MySQL
 $port = "port"; // Portul implicit pentru MySQL
 $username = "username";
