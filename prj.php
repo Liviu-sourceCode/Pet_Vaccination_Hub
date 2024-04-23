@@ -53,7 +53,7 @@ if (($_SERVER["REQUEST_METHOD"])  == "POST") {
                 echo "Eroare la stergerea animalului: " . mysqli_error($conn);
             }
         } else {
-            // ID-ul nu exista in tabel, afisam un mesaj corespunzător
+            // ID-ul nu exista in tabel, afisam un mesaj corespunzator
             echo "Nu exista nici un animal cu ID-ul $id_animal!<br>";
         }
     } 
@@ -274,7 +274,7 @@ if ($conn->query($sql) === TRUE) {
         $row_vaccin = $result_vaccin->fetch_assoc();
         
         // Afisam mesajul de succes folosind numele animalului si al vaccinului
-        echo "Administrarea vaccinului " . "'" .$row_vaccin["nume"] . "'" ." pentru animalul " . "'" .$row_animal["nume"] . "'" . " la data de '$data_aplicare' a fost realizată cu succes!";
+        echo "Administrarea vaccinului " . "'" .$row_vaccin["nume"] . "'" ." pentru animalul " . "'" .$row_animal["nume"] . "'" . " la data de '$data_aplicare' a fost realizata cu succes!";
     } else {
         echo "Nu s-au gasit inregistrari pentru ID-urile specificate.";
     }
@@ -310,7 +310,7 @@ if ($conn->query($sql) === TRUE) {
             echo "Eroare la stergerea administrarii: " . mysqli_error($conn);
         }
     } else {
-        // ID-ul nu exista in tabel, afisam un mesaj corespunzător
+        // ID-ul nu exista in tabel, afisam un mesaj corespunzator
         echo "Nu exista nici o administrare cu ID-ul $id_administrare!<br>";
         
     }
