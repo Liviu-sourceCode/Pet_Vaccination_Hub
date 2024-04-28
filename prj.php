@@ -172,7 +172,7 @@ if (mysqli_query($conn, $reset_auto_increment)) {
         echo "Nu au fost gasite inregistrari in tabelul 'vaccinuri'!<br>";
     }
 
-    // Resetează incrementul daca nu exista inregistrari in tabelul vaccinuri
+    // Reseteaza incrementul daca nu exista inregistrari in tabelul vaccinuri
     if ($result->num_rows == 0 &&  isset($_POST["sterge_vaccin"])) {
         $reset_auto_increment = "ALTER TABLE vaccinuri AUTO_INCREMENT = 1";
         if (mysqli_query($conn, $reset_auto_increment)) {
