@@ -1,10 +1,6 @@
 # Pet_Vaccination_Hub
 
-Acest proiect are ca scop gestionarea vaccinurilor destinate animalelor de companie, fiind ideal pentru un cabinet veterinar.
-Tehnologiile utilizate: am folosit Html & Css pentru partea de front-end, iar pentru partea de back-end am folosit PHP si MySQL.
-Proiectul contine 3 tabele: animale, vaccinuri si administrare_vaccinuri.
-In tabelul 'administrare_vaccinuri' am adaugat 2 chei straine pentru id_animal si id_vaccin, ceea ce inseamna ca atunci cand user-ul sterge un animal sau vaccin, se va sterge automat si randul din tabelul 'administrare_vaccinuri' care contine acea data stearsa.
-In acest proiect putem gestiona datele din tabele dupa bunul plac, existand operatiunile de adaugare, stergere si afisare a datelor din tabele.
-Atribuirea vaccinului dorit pentru un anume animal se face pe baza id-urilor acestora, avand si optiunea de a adauga data la care va avea loc vaccinarea.
-In momentul stergerii tuturor elementelor unui tabel se reseteaza incrementul acestuia.
-Fiecare operatiune efectuata este insotita de mesaje si afisari menite sa descrie starea actuala a solicitarii tale.
+Sistemul de gestionare a vaccinurilor este conceput pentru a gestiona vaccinurile destinate animalelor de companie, fiind ideal pentru cabinetele veterinare. Proiectul utilizeaza HTML & CSS pentru partea de front-end, iar pentru partea de back-end PHP & MySQL. Acesta consta in trei tabele: animale, vaccinuri si administrare vaccinuri. In tabela 'administrare vaccinuri', au fost adaugate doua chei straine pentru id-ul animalului si al vaccinului, ceea ce inseamna ca atunci cand un utilizator sterge un animal sau un vaccin, randul corespunzător din tabela 'administrare vaccinuri' care contine cel putin una din acele date va fi sters automat.
+
+In acest proiect utilizatorii pot gestiona datele din tabele in functie de necesitatile lor, cu operatiuni precum adaugarea, stergerea si afisarea datelor din tabele. Atribuirea unui vaccin dorit unui animal specific se face pe baza ID-urilor acestora, cu optiunea de a adauga data vaccinarii. Atunci când sunt sterse toate elementele unei tabele, incrementarea acesteia este resetata. Fiecare operatie este insotita de mesaje si afisari menite sa descrie starea curenta a cererii tale.
+
