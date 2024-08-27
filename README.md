@@ -1,12 +1,26 @@
-# Pet_Vaccination_Hub
+# Pet Vaccination Hub
 
-Proiectul de gestionare a vaccinurilor este conceput pentru a gestiona vaccinurile destinate animalelor de companie, fiind ideal pentru cabinetele veterinare. Acesta ofera o interfata intuitiva care are in componenta sa 3 zone importante de referinta, si anume: gestionarea operatiunilor pentru animale, gestionarea operatiunilor pentru vaccinuri si partea de gestionare a administrarii de vaccinuri.
+## Project Overview
+The **Pet Vaccination Management Project** is designed to efficiently manage vaccinations for pets, making it an ideal solution for veterinary clinics. The application offers an intuitive interface with three key areas of reference:
 
-Caracteristici principale: In acest proiect utilizatorii pot gestiona datele din tabele in functie de necesitatile lor, cu operatiuni precum adaugarea, stergerea si afisarea datelor din tabele. Atribuirea vaccinurilor pentru animale se face pe baza ID-urilor acestora, avand optiunea de a adauga si data vaccinarii. Stergerea unui animal sau a unui vaccin din tabelele asociate acestora, aduce dupa sine si eliminarea programarilor de vaccinare care contin animalul si/sau vaccinul sters. Atunci cand sunt sterse toate elementele unui tabel, inrementul se reseteaza la valoarea 1. Fiecare operatiune este insotita de mesaje si afisari menite sa descrie starea curenta a cererii tale.
+- **Animal Operations Management**
+- **Vaccine Operations Management**
+- **Vaccination Administration Management**
 
-Tehnologii folosite: HTML & CSS pentru partea de front-end, iar pentru partea de back-end PHP & MySQL. Sistemul pentru versionarea codului este GitHub.
+## Main Features
+- **Data Management**: Users can manage data within tables according to their needs, with operations such as adding, deleting, and displaying records.
+- **Vaccine Assignment**: Vaccines can be assigned to pets based on their ID, with the option to add the vaccination date.
+- **Cascading Deletion**: Deleting a pet or a vaccine automatically removes all associated vaccination records from the database.
+- **Auto Increment Reset**: If all records in a table are deleted, the auto-increment counter resets to 1.
+- **User Feedback**: Each operation is accompanied by messages and displays that describe the current status of the request.
 
-Proiectul a fost realizat pentru a consolida conceptele de gestionare a unei baze de date MySQL si a crea o aplicatie web cu aplicabilitate in viata reala. De asemenea gestionarea mesajelor de afisare pentru fiecare operatiune efectuata consider ca m-a facut sa fiu mai atent la detalii, fiind necesar sa iau in calcul problemele cu care s-ar putea confrunta un simplu utilizator.
+## Technologies Used
+- **Frontend**: HTML & CSS
+- **Backend**: PHP & MySQL
+- **Version Control**: GitHub
+
+## Purpose
+This project was developed to reinforce concepts related to MySQL database management and to create a web application with real-world applicability. Additionally, managing feedback messages for each operation has enhanced my attention to detail, requiring consideration of potential issues that a typical user might encounter.
 
 
 
